@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+  <head>
+    <title>SpringBoot Security</title>
+  </head>
+  <body>
+    <form action="login" th:action="@{/login}" method="post">
+        <div th:if="${param.error}">
+            <span>Invalid Email and Password.</span>
+        </div>
+        <input type="email" name="username" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <button type="submit">LogIn</button>
+    </form>
+  </body>
+</html>
